@@ -81,13 +81,13 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	make -sC $(LIB_DIR)
-	cc $(FLAGS) $(OBJS) -o $(NAME) -L. -lmlx -framework OpenGL -framework AppKit -L. $(LIBFT)
-#	cc $(FLAGS) $(OBJS) -o $(NAME) -L./minilibx_linux/ -lmlx_Linux -lX11 -lXext -lm $(LIBFT)	
+#	cc $(FLAGS) $(OBJS) -o $(NAME) -L. -lmlx -framework OpenGL -framework AppKit -L. $(LIBFT)
+	cc $(FLAGS) $(OBJS) -o $(NAME) -L./minilibx_linux/ -lmlx_Linux -lX11 -lXext -lm $(LIBFT)	
 
 bonus: $(B_OBJS)
 	make -sC $(LIB_DIR)
-	cc $(FLAGS) $(B_OBJS) -o $(NAME) -L. -lmlx -framework OpenGL -framework AppKit -L. $(LIBFT)
-#	cc $(FLAGS) $(B_OBJS) -o $(NAME) -L./minilibx_linux/ -lmlx_Linux -lX11 -lXext -lm $(LIBFT)	
+#	cc $(FLAGS) $(B_OBJS) -o $(NAME) -L. -lmlx -framework OpenGL -framework AppKit -L. $(LIBFT)
+	cc $(FLAGS) $(B_OBJS) -o $(NAME) -L./minilibx_linux/ -lmlx_Linux -lX11 -lXext -lm $(LIBFT)	
 
 %.o: %.c
 	cc $(FLAGS) -c $< -o $@
